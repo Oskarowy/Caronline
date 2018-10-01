@@ -1,3 +1,4 @@
+using Caronline.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
@@ -7,7 +8,7 @@ namespace Persistence
         public CaronlineDbContext(DbContextOptions<CaronlineDbContext> options)
             : base(options)
         {
-             
         }
+            public DbSet<Make> Makes { get; set; } 
     }
 }
